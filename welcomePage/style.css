@@ -1,0 +1,335 @@
+
+
+/* font-family: "IBM Plex Mono", monospace;
+font-family: "Poppins", sans-serif; */
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #003c6b;
+    color: white;
+}
+
+.header {
+    font-family: "IBM Plex Mono", monospace;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 0 60px 0 60px;
+    letter-spacing: 0.2rem;
+    font-size: 30px;
+    color: #ff99bf;
+}
+.container {
+    max-width: 1330px;
+    margin: 0 auto;
+    height: 875px;
+}
+
+.side {
+    display: flex;
+    height: 1000px;
+    justify-content: space-evenly;
+}
+
+.left-column {
+    flex: 1.15;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    padding-top: 70px; 
+}
+
+.left-column h1 {
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.left-column h2 {
+    color: #ff99bf;
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+
+.io-button {
+    width: 250px;
+    background: #627fff;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 3.2em;
+    padding-right: 3.3em;
+    cursor: pointer;
+  }
+  
+  .io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.6em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.6s;
+  }
+  
+  .io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .io-button .icon svg {
+    width: 1.1em;
+    transition: transform 2s;
+    color: #7b52b9;
+  }
+  
+  .io-button:hover .icon svg {
+    transform: translateX(0.5em);
+  }
+  
+  .io-button:active .icon {
+    transform: scale(0.65);
+  }
+
+.right-column {
+    flex: 1;
+    padding-left: 5px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.right-column img{
+    width: 650px;
+    height: 600px;
+}
+
+
+
+.guideline {
+  background-color: #7ac9fa;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  padding-top: 15%;
+  color: #003c6b;
+}
+
+.guideline h1 {
+  font-size: 45px;
+  margin-bottom: 80px;
+}
+
+.guideline img {
+  width: 185px;
+  height: 185px;
+  margin-bottom: 80px;
+
+}
+
+.guideline p {
+  width: 1200px;
+  font-size: 30px;
+  text-align: center;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.guideline {
+  animation: move ease;
+  animation-timeline: view();
+  animation-range: entry 0 cover 45%;
+}
+
+
+.guideline img {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+.guideline h1 {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 35%;
+}
+
+.guideline p {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 35%;
+}
+
+.footer {
+  max-width: 1330px;
+  margin: 0 auto;
+  height: 700px;
+  padding: 100px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer h1 {
+  color: #7ac9fa;
+  font-size: 50px;
+  flex: 1;
+}
+
+.info {
+  flex: 1;
+}
+
+.message-icon {
+  height: 400px;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.envelope {
+  position: absolute;
+  height: 180px;
+  width: 130px;
+  top: 10px;
+  left: 130px;
+}
+
+.smartphone {
+  height: 200px;
+  width: 300px;
+}
+
+.contacts {
+  padding-left: 50px;
+  color: #7ac9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 300px;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.phone {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.phone p {
+  font-weight: 500;
+}
+
+.phone p:hover {
+  color: #bae3fd;
+  letter-spacing: 3px;
+}
+
+.email {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.email a {
+  font-weight: 500;
+}
+
+
+.footer h1 {
+  animation: fade-right 1.7s;
+  animation-timeline: view();
+
+}
+
+/* Animations on scroll */
+
+.scroll-animate{
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.right-scroll-animate {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.4s ease-out;
+}
+
+.right-scroll-animate.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@media (max-width: 500px) {
+
+  .header {
+    font-family: "IBM Plex Mono", monospace;
+    /* display: flex; */
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 50px 0 50px; */
+    letter-spacing: 0.1rem;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ff99bf
+  }
+  .container {
+    max-width: 1330px;
+    margin: 0 auto;
+    height: 75px;
+    margin-bottom: 900px;
+  }
+}
